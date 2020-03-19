@@ -84,7 +84,11 @@
                     Laravel
                 </div>
 
-                hello
+                CSS framework: <a href="https://bulma.io/">bulma</a>
+                Fullpage VueJs plugin: <a href="https://github.com/alvarotrigo/vue-fullpage.js">fullpage vuejs</a>
+                Animate.css <a href="https://daneden.github.io/animate.css/">animate.css</a>
+                Animate on scroll library <a href="https://github.com/matthieua/WOW">wowjs</a>
+
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
