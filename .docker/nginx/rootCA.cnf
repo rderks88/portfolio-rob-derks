@@ -1,0 +1,12 @@
+[req]
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=NL
+ST=Zuid-holland
+L=Leiden
+O=End Point
+OU=Testing Domain
+emailAddress=administrator@techniek-team.nl

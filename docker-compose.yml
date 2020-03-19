@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:11.3
+    ports:
+      - 127.9.1.1:54321:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    networks:
+      internal-network:
+        aliases:
+          - ${COMPOSE_PROJECT_NAME}-postgres
+
+  nginx:
+    build: .docker/nginx
+    ports:
+      - 127.9.1.1:80:80
+    volumes:
+      - ${PWD-.}:/app
+    links:
+      - php
+    env_file:
+      - .env
+    networks:
+      internal-network:
+        aliases:
+          - ${COMPOSE_PROJECT_NAME}-nginx
+
+  php:
+    build: .docker/php
+    volumes:
+      - ${PWD-.}:/app
+    links:
+      - postgres
+    working_dir: /app
+    env_file:
+      - .env
+    networks:
+      internal-network:
+        aliases:
+          - ${COMPOSE_PROJECT_NAME}-php
+
+volumes:
+  postgres:
+
+networks:
+  internal-network:
+    external: true
+
+
