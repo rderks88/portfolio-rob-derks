@@ -88,6 +88,7 @@
                 Fullpage VueJs plugin: <a href="https://github.com/alvarotrigo/vue-fullpage.js">fullpage vuejs</a>
                 Animate.css <a href="https://daneden.github.io/animate.css/">animate.css</a>
                 Animate on scroll library <a href="https://github.com/matthieua/WOW">wowjs</a>
+                <a href="https://github.com/dixonandmoe/rellax">Parralax scrolling</a>
 
 
                 <div class="links">

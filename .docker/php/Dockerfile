@@ -19,7 +19,7 @@ RUN apt-get update \
     && docker-php-ext-install pdo pdo_pgsql pgsql zip pdo_mysql bcmath sockets gd
 
 # Install nodejs and yarn
-RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - && sudo apt-get install -y nodejs && curl -o- -L https://yarnpkg.com/install.sh | bash
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && sudo apt-get install -y nodejs && curl -o- -L https://yarnpkg.com/install.sh | bash
 
 # Configure xdebug
 RUN pecl install xdebug
